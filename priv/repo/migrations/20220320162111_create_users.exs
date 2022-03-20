@@ -26,6 +26,10 @@ defmodule Abound.Repo.Migrations.CreateUsers do
       add :status, :string
       add :net_monthly_pay, :string
       add :percent_salary_benefit, :integer
+      add :bank_name, :string
+      add :account_name, :string
+      add :account_number, :string
+      add :bvn, :string
       add :role_id, references(:roles, on_delete: :nothing), null: false, default: 1
       add :company_id, references(:companies, on_delete: :delete_all), null: false
 

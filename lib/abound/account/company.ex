@@ -4,6 +4,9 @@ defmodule Abound.Account.Company do
 
   schema "companies" do
     field :name, :string
+    field :email, :string
+
+    has_many :users, Abound.Account.User
 
     timestamps()
   end
